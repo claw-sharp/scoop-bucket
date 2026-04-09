@@ -1,0 +1,23 @@
+{
+  "version": "0.0.3",
+  "description": "ClawSharp desktop app",
+  "homepage": "https://github.com/claw-sharp/ClawSharp",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/claw-sharp/ClawSharp/releases/download/desktop-v0.0.3/ClawSharp_0.0.3_windows_x64_setup.exe",
+      "hash": "a66457c4fed3560fd65606263b6ef645f5295cee3aa167a55ab5dd9864381da3"
+    }
+  },
+  "installer": {
+    "script": "Start-Process -FilePath \"$dir\\$fname\" -ArgumentList \"/S\" -Wait"
+  },
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/claw-sharp/ClawSharp/releases/download/desktop-v0.0.3/ClawSharp_$version_windows_x64_setup.exe"
+      }
+    }
+  }
+}
